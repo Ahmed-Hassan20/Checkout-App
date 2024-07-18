@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:payment/Features/Checkout/presentation/Views/widgets/MyCartView_Body.dart';
-import 'package:payment/core/widgets/cutom_app_bar.dart';
+import 'package:payment/core/widgets/custom_app_bar.dart';
 
 class MyCartView extends StatelessWidget{
+  static const String routeName = 'MyCartView';
+
   const MyCartView({super.key});
 
   @override
