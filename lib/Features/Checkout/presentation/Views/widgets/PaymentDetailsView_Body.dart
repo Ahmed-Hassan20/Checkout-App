@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import 'package:payment/Features/Checkout/presentation/Views/MyCartView.dart';
+import 'package:payment/Features/Checkout/presentation/Views/ThankYouView.dart';
 import 'package:payment/Features/Checkout/presentation/Views/widgets/payment_methods_list_view.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
@@ -43,10 +44,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                       formKey.currentState!.save();
                       log('payment');
                     } else {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
-                        return const MyCartView();
-                      }));
+                    Navigator.of(context).pushNamed(ThankYouView.routeName);
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});
                     }
